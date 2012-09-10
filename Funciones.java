@@ -1,6 +1,0 @@
-//funciones 
-
-public class Funciones
-{	
-	
-}
