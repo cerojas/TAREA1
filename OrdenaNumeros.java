@@ -1,21 +1,22 @@
 // recibe numeros y los ordena
+
 import java.util.*;
+
 public class OrdenaNumeros
 {
 	public static void main(String[] args)
 	{
 		
-		
-		
 		Scanner lee = new Scanner(System.in);
 		
+		List<Integer> lista =new ArrayList<Integer>();
 		
 		
 		boolean salir= true;
 
 		while(salir)
 		{
-		
+			
 			System.out.println("ingrese un numero: ");
 			String opcion = lee.next();
 		
@@ -25,21 +26,34 @@ public class OrdenaNumeros
 				salir= false;
 			}
 			else
-			{
-				try
-				{
-					int numero= Integer.parseInt(opcion);
-					System.out.println("valor numerico "+numero);
-				}
-				catch(NumberFormatException e)
-				{
-					System.out.println("digite una opcion valida! ");
-				}
+			{ 
 				
-			}
-		}
+				if(IsNumero.IsInt(opcion))
+				{
+					lista.add(Integer.parseInt(opcion));
+				}
+				else
+				{
+					System.out.println("no es numerico ");
+				}
 			
+			
+			
+			}
+			
+			
+		}
+		
+		Collections.sort(lista);
+		
+		for(int a=0; a<lista.size(); a++)
+		{
+			System.out.println(lista.get(a));
+		}
+		
+		String opcion=lee.next();
 		
 		
 	}
 }
+

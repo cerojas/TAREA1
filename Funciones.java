@@ -1,0 +1,6 @@
+//funciones 
+
+public class Funciones
+{	
+	
+}
